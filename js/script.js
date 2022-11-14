@@ -56,7 +56,10 @@ createApp({
             } else {
                 this.currentImageIndex++;
             }
-        }
-    }
+        },
+        changeImage(index) {
+            this.currentImageIndex = index;
+        },
+    },
 }).mount('#app');
 
