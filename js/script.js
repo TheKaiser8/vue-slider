@@ -41,5 +41,22 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        prevImage() {
+            if( this.currentImageIndex === 0 ) {
+                this.currentImageIndex = this.slides.length - 1;
+            } else {
+                this.currentImageIndex--;
+            }
+        },
+        nextImage() {
+            if( this.currentImageIndex === this.slides.length - 1 ) {
+                this.currentImageIndex = 0;
+            } else {
+                this.currentImageIndex++;
+            }
+        }
     }
 }).mount('#app');
+
